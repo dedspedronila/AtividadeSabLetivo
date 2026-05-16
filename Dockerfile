@@ -23,7 +23,7 @@ WORKDIR /var/www/html
 COPY . .
 
 # 5. Roda o composer ignorando pequenas travas de plataforma local
-RUN cd "/var/www/html/Busca CEP" && composer install --no-interaction --optimize-autoloader --no-dev --ignore-platform-reqs
+RUN cd "/var/www/html/BuscaCEP" && composer install --no-interaction --optimize-autoloader --no-dev --ignore-platform-reqs
 RUN cd "/var/www/html/Praticando-20-03" && composer install --no-interaction --optimize-autoloader --no-dev --ignore-platform-reqs
 
 # 6. Permissões finais
