@@ -150,7 +150,7 @@
                     <div class="area-links">
                         <h2 class="titulo-links">Links</h2>
                         <div class="lista-links">
-                            <a class="botao-link" href="./Busca CEP/index.php">Praticando Busca CEP</a>
+                            <a class="botao-link" href="./BuscaCEP/index.php">Praticando Busca CEP</a>
                             <a class="botao-link" href="inicio.php">Trabalho 1 - Contador de Acessos</a>
                         </div>
                     </div>

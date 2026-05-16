@@ -22,11 +22,15 @@ ENV COMPOSER_ALLOW_SUPERUSER=1
 WORKDIR /var/www/html
 COPY . .
 
-# 5. Roda o composer ignorando pequenas travas de plataforma local
-RUN cd "/var/www/html/BuscaCEP" && composer install --no-interaction --optimize-autoloader --no-dev --ignore-platform-reqs
-RUN cd "/var/www/html/Praticando-20-03" && composer install --no-interaction --optimize-autoloader --no-dev --ignore-platform-reqs
+# 5. GARANTE QUE A PASTA DADOS EXISTA (caso o git tenha ignorado por estar vazia)
+RUN mkdir -p /var/www/html/dados
 
-# 6. Permissões finais
+# 6. Roda o composer nas pastas corretas
+RUN cd /var/www/html/BuscaCEP && composer install --no-interaction --optimize-autoloader --no-dev --ignore-platform-reqs
+RUN cd /var/www/html/Praticando-20-03 && composer install --no-interaction --optimize-autoloader --no-dev --ignore-platform-reqs
+
+# 7. DÁ PERMISSÃO MÁXIMA DE ESCRITA NA PASTA DE DADOS PARA O APACHE
+RUN chmod -R 775 /var/www/html/dados
 RUN chown -R www-data:www-data /var/www/html
 
 EXPOSE 80
