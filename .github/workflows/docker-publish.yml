@@ -24,4 +24,4 @@ jobs:
         context: .
         file: ./Dockerfile
         push: true
-        tags: ${{ secrets.DOCKERHUB_USERNAME }}/sistema-php:latest
+        tags: ${{ secrets.DOCKERHUB_USERNAME }}/sabletivo_workflows:latest
