@@ -17,7 +17,8 @@ renderizarCabecalho('Inicio - Contador de Acessos', 'inicio.php');
         </p>
         <p>
             Aqui eu reuni algumas paginas com um tema simples sobre minha rotina de estudos, interesses e formas de contato.
-            O objetivo principal deste trabalho e mostrar a navegacao entre paginas e o funcionamento do contador de acessos.
+	    O objetivo principal deste trabalho e mostrar a navegacao entre paginas e o funcionamento do contador de acessos.
+	SENHA:senha_da_nasa
         </p>
     </div>
 
